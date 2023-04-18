@@ -8,7 +8,7 @@ import org.jetbrains.exposed.sql.Database
 object DBConfig {
     fun getDatabase() {
         if (Configuration.env.isTestEnv.equals("Y", true)) {
-            println("Test env ")
+            println("Test environment ")
             testEnvDBSetup()
         } else {
             PostgresConfig().connect(
